@@ -1,0 +1,58 @@
+### Flask CRUD API with MongoDB - Sample Requests
+### You can use this file with VS Code REST Client extension or copy to Postman
+
+@baseUrl = http://localhost:8080
+
+### Health Check
+GET {{baseUrl}}/health
+
+### Get API Information
+GET {{baseUrl}}/
+
+### Get All Users
+GET {{baseUrl}}/users
+
+### Create New User 1
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "name": "Alice Johnson",
+    "email": "alice@example.com",
+    "age": 28
+}
+
+### Create New User 2 (without age)
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "name": "Charlie Brown",
+    "email": "charlie@example.com"
+}
+
+### Get User by ID (replace with actual ID)
+GET {{baseUrl}}/users/USER_ID_HERE
+
+### Update User by ID (replace with actual ID)
+PUT {{baseUrl}}/users/USER_ID_HERE
+Content-Type: application/json
+
+{
+    "name": "Alice Johnson Updated",
+    "age": 29
+}
+
+### Delete User by ID (replace with actual ID)
+DELETE {{baseUrl}}/users/USER_ID_HERE
+
+### Error Test - Invalid ID format
+GET {{baseUrl}}/users/invalid-id
+
+### Error Test - Create user without required fields
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "age": 25
+} 

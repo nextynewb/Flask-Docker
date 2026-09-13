@@ -12,7 +12,7 @@ client = MongoClient(MONGO_URI)
 db = client.flask_crud_db
 users_collection = db.users
 
-# Convert MongoDB documents to JSON
+# Convert MongoDB _id to string
 def serialize_user(user):
     if user:
         user['_id'] = str(user['_id'])

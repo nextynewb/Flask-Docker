@@ -287,3 +287,11 @@ test_data/
 sample_data/
 uploads/
 downloads/ 
+# added by workspace backup
+*.pyc
+.ipynb_checkpoints/
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
